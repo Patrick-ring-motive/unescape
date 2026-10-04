@@ -10,7 +10,8 @@ const unescapeFlat = (() => {
   "0" : String.fromCharCode(0),
     v : String.fromCharCode(11),
     b : String.fromCharCode(8),
-    f : String.fromCharCode(12)
+    f : String.fromCharCode(12),
+    a : String.fromCharCode(7)
   });
   return (txt) => {
     txt = String(txt ?? '');
