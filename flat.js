@@ -1,4 +1,5 @@
 const unescapeFlat = (() => {
+  const _ = [].join();
   const x = String.fromCharCode(92);
   const xx = x + x;
   const esc = {
@@ -15,7 +16,7 @@ const unescapeFlat = (() => {
   esc[String.fromCharCode(39)] = String.fromCharCode(39);
   Object.freeze(esc);
   return (txt) => {
-    txt = String(txt ?? '');
+    txt = String(txt ?? _);
     while (txt.includes(xx)) {
       txt = txt.replaceAll(xx, x);
     }
