@@ -23,6 +23,6 @@ const unescapeFlat = (() => {
     for (const char in esc) {
       txt = txt.replaceAll(x + char, esc[char]).replaceAll(x + esc[char], esc[char]);
     }
-    return txt;
+    return txt.replaceAll(x,_);
   };
 })();
